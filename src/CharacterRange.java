@@ -1,8 +1,5 @@
 public abstract class CharacterRange extends CharacterList {
-    protected static int start = 0;
-    protected static int end = 0;
-
-    public char[] all()
+    public static char[] all(int start, int end)
     {
         char[] list = new char[end - start + 1];
 
@@ -12,7 +9,7 @@ public abstract class CharacterRange extends CharacterList {
         return list;
     }
 
-    public boolean isCharacterInList(char value)
+    public static boolean isCharacterInList(int start, int end, char value)
     {
         return value>=start && value<=end;
     }
