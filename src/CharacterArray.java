@@ -1,12 +1,10 @@
 public abstract class CharacterArray extends CharacterList {
-    protected static char[] list = {};
-
-    public char[] all()
+    public static char[] all(char[] list)
     {
         return list;
     }
 
-    public boolean isCharacterInList(char value)
+    public static boolean isCharacterInList(char[] list, char value)
     {
         boolean isFound = false;
 
