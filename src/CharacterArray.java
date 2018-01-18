@@ -1,18 +1,18 @@
 public abstract class CharacterArray extends CharacterList {
-    protected Character[] list = {};
+    protected static char[] list = {};
 
-    public Character[] all()
+    public char[] all()
     {
         return list;
     }
 
-    public boolean isCharacterInList(Character value)
+    public boolean isCharacterInList(char value)
     {
         boolean isFound = false;
 
         for (int i = 0; i < list.length; i++)
         {
-            if (value.equals(list[i])) {
+            if (value == list[i]) {
                 isFound = true;
                 break;
             }

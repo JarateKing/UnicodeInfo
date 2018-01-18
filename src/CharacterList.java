@@ -1,4 +1,4 @@
 public abstract class CharacterList {
-    public abstract Character[] all();
-    public abstract boolean isCharacterInList(Character value);
+    public abstract char[] all();
+    public abstract boolean isCharacterInList(char value);
 }
