@@ -1,6 +1,6 @@
 public class CharsASCII extends CharacterRange {
-    protected static int start = 0x20;
-    protected static int end = 0x7F;
+    private static int start = 0x20;
+    private static int end = 0x7F;
 
     public char[] all()
     {
