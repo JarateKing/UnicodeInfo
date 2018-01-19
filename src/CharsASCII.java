@@ -11,4 +11,9 @@ public class CharsASCII extends CharacterRange {
     {
         return super.isCharacterInList(start, end, value);
     }
+
+    public String toString()
+    {
+        return getClass().getName();
+    }
 }
