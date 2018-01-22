@@ -8,6 +8,7 @@ public class CharacterSets {
         sets = new ArrayList();
         sets.add(new CharsASCII());
         sets.add(new CharsZeroWidth());
+        sets.add(new CharsZalgoAbove());
     }
 
     public String listSetsUsed(String input)
