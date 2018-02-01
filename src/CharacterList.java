@@ -1,4 +1,4 @@
-public abstract class CharacterList {
-    public abstract char[] all();
-    public abstract boolean isCharacterInList(char value);
+public interface CharacterList {
+    char[] all();
+    boolean isCharacterInList(char value);
 }

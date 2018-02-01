@@ -5,10 +5,13 @@ public class CharacterSets {
 
     public CharacterSets()
     {
-        sets = new ArrayList();
-        sets.add(new CharsASCII());
-        sets.add(new CharsZeroWidth());
-        sets.add(new CharsZalgoAbove());
+        sets = new ArrayList<CharacterList>();
+
+        for(CharRanges range : CharRanges.values())
+            sets.add(range);
+
+        for(CharArrays array : CharArrays.values())
+            sets.add(array);
     }
 
     public String listSetsUsed(String input)
