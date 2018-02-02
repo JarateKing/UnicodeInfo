@@ -38,4 +38,14 @@ public enum CharArrays implements CharacterList
 
         return isFound;
     }
+
+    public String getRegex()
+    {
+        String regex = Character.toString(list[0]);
+
+        for(int i = 1; i < list.length; i++)
+            regex += "|" + list[i];
+
+        return regex;
+    }
 }

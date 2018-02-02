@@ -26,4 +26,14 @@ public enum CharRanges implements CharacterList
     {
         return value>=start && value<=end;
     }
+
+    public String getRegex()
+    {
+        String regex = Character.toString((char)(start));
+
+        for (int i = 1; i < end - start + 1; i++)
+            regex += "|" + Character.toString((char)(start + i));
+
+        return regex;
+    }
 }
