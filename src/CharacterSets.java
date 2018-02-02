@@ -18,16 +18,12 @@ public class CharacterSets {
     {
         StringBuilder base = new StringBuilder();
 
-        for (int i = 0; i < sets.size(); i++)
+        for (CharacterList set : sets)
         {
-            for (int j = 0; j < input.length(); j++)
+            if (isSetUsed(set, input))
             {
-                if (sets.get(i).isCharacterInList(input.charAt(j)))
-                {
-                    base.append(sets.get(i));
-                    base.append("\n");
-                    break;
-                }
+                base.append(set);
+                base.append("\n");
             }
         }
 
