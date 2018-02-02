@@ -29,11 +29,13 @@ public enum CharRanges implements CharacterList
 
     public String getRegex()
     {
-        String regex = Character.toString((char)(start));
+        StringBuilder regex = new StringBuilder((char)(start));
 
-        for (int i = 1; i < end - start + 1; i++)
-            regex += "|" + Character.toString((char)(start + i));
+        for (int i = 1; i < end - start + 1; i++) {
+            regex.append("|");
+            regex.append((char) (start + i));
+        }
 
-        return regex;
+        return regex.toString();
     }
 }

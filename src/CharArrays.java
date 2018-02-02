@@ -41,11 +41,13 @@ public enum CharArrays implements CharacterList
 
     public String getRegex()
     {
-        String regex = Character.toString(list[0]);
+        StringBuilder regex = new StringBuilder(list[0]);
 
-        for(int i = 1; i < list.length; i++)
-            regex += "|" + list[i];
+        for(int i = 1; i < list.length; i++) {
+            regex.append("|");
+            regex.append(list[i]);
+        }
 
-        return regex;
+        return regex.toString();
     }
 }
