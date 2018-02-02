@@ -32,4 +32,14 @@ public class CharacterSets {
 
         return base;
     }
+
+    public boolean isSetUsed(CharacterList set, String input)
+    {
+        for (int i = 0; i < input.length(); i++)
+        {
+            if (set.isCharacterInList(input.charAt(i)))
+                return true;
+        }
+        return false;
+    }
 }
