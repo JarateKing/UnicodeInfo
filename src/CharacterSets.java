@@ -16,7 +16,7 @@ public class CharacterSets {
 
     public String listSetsUsed(String input)
     {
-        String base = "";
+        StringBuilder base = new StringBuilder();
 
         for (int i = 0; i < sets.size(); i++)
         {
@@ -24,13 +24,14 @@ public class CharacterSets {
             {
                 if (sets.get(i).isCharacterInList(input.charAt(j)))
                 {
-                    base += sets.get(i) + "\n";
+                    base.append(sets.get(i));
+                    base.append("\n");
                     break;
                 }
             }
         }
 
-        return base;
+        return base.toString();
     }
 
     public boolean isSetUsed(CharacterList set, String input)
