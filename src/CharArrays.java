@@ -47,6 +47,10 @@ public enum CharArrays implements CharacterList
 
         for(int i = 1; i < list.length; i++) {
             regex.append("|");
+
+            if (CharArrays.REGEX_SPECIAL.isCharacterInList(list[i]))
+                regex.append("\\");
+
             regex.append(list[i]);
         }
 
