@@ -29,10 +29,16 @@ public enum CharRanges implements CharacterList
 
     public String getRegex()
     {
-        StringBuilder regex = new StringBuilder((char)(start));
+        StringBuilder regex = new StringBuilder();
+
+        if (CharArrays.REGEX_SPECIAL.isCharacterInList((char)(start)))
+            regex.append("\\");
+        regex.append((char)(start));
 
         for (int i = 1; i < end - start + 1; i++) {
             regex.append("|");
+            if (CharArrays.REGEX_SPECIAL.isCharacterInList((char)(start + i)))
+                regex.append("\\");
             regex.append((char) (start + i));
         }
 
