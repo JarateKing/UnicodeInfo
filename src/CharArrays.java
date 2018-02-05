@@ -28,6 +28,12 @@ public enum CharArrays implements CharacterList
 
     public boolean isCharacterInList(char value)
     {
+        // assume the list is sorted
+        if (value < list[0])
+            return false;
+        if (value > list[list.length-1])
+            return false;
+
         for (int i = 0; i < list.length; i++)
         {
             if (value == list[i])
