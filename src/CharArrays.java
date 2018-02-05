@@ -28,17 +28,13 @@ public enum CharArrays implements CharacterList
 
     public boolean isCharacterInList(char value)
     {
-        boolean isFound = false;
-
         for (int i = 0; i < list.length; i++)
         {
-            if (value == list[i]) {
-                isFound = true;
-                break;
-            }
+            if (value == list[i])
+                return true;
         }
 
-        return isFound;
+        return false;
     }
 
     public String getRegex()
