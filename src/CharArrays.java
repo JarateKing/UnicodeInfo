@@ -34,12 +34,12 @@ public enum CharArrays implements CharacterList
         if (value > list[list.length-1])
             return false;
 
+        // otherwise, check if it's in the list
         for (int i = 0; i < list.length; i++)
         {
             if (value == list[i])
                 return true;
         }
-
         return false;
     }
 
@@ -47,10 +47,12 @@ public enum CharArrays implements CharacterList
     {
         StringBuilder regex = new StringBuilder();
 
+        // add the first character
         if (CharArrays.REGEX_SPECIAL.isCharacterInList(list[0]))
             regex.append("\\");
         regex.append(list[0]);
 
+        // add the other characters with a | in front
         for(int i = 1; i < list.length; i++) {
             regex.append("|");
 

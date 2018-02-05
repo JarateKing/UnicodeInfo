@@ -16,6 +16,7 @@ public enum CharRanges implements CharacterList
     {
         char[] list = new char[end - start + 1];
 
+        // add each element to the list
         for (int i = 0; i < list.length; i++)
             list[i] = (char)(start + i);
 
@@ -31,10 +32,12 @@ public enum CharRanges implements CharacterList
     {
         StringBuilder regex = new StringBuilder();
 
+        // add the first character
         if (CharArrays.REGEX_SPECIAL.isCharacterInList((char)(start)))
             regex.append("\\");
         regex.append((char)(start));
 
+        // add the other characters with a | in front
         for (int i = 1; i < end - start + 1; i++) {
             regex.append("|");
             if (CharArrays.REGEX_SPECIAL.isCharacterInList((char)(start + i)))

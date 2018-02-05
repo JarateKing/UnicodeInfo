@@ -18,6 +18,7 @@ public class CharacterSets {
     {
         StringBuilder base = new StringBuilder();
 
+        // go through each set and appending the ones that work
         for (CharacterList set : sets)
         {
             if (isSetUsed(set, input))
@@ -32,6 +33,7 @@ public class CharacterSets {
 
     public boolean isSetUsed(CharacterList set, String input)
     {
+        // go through the whole string, checking each character
         for (int i = 0; i < input.length(); i++)
         {
             if (set.isCharacterInList(input.charAt(i)))
