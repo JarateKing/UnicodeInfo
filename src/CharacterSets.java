@@ -27,6 +27,9 @@ public class CharacterSets {
                 base.append("\n");
             }
         }
+        // remove the last nextline
+        if (base.length() > 0)
+            base.setLength(base.length() - 1);
 
         return base.toString();
     }
