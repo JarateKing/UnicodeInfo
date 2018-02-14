@@ -14,6 +14,7 @@ public enum CharCombinations implements CharacterList
     {
         char[] toReturn = new char[this.getSize()];
 
+        // copy the elements of each set to the larger array
         int offset = 0;
         for (int i = 0; i < list.length; i++)
         {
@@ -32,6 +33,7 @@ public enum CharCombinations implements CharacterList
     {
         int size = 0;
 
+        // get the sum of the size of each set
         for (int i = 0; i < list.length; i++)
             size += list[i].getSize();
 
@@ -40,6 +42,7 @@ public enum CharCombinations implements CharacterList
 
     public boolean isCharacterInList(char value)
     {
+        // check each set
         for (int i = 0; i < list.length; i++)
         {
             if (list[i].isCharacterInList(value))
@@ -52,10 +55,10 @@ public enum CharCombinations implements CharacterList
     {
         StringBuilder regex = new StringBuilder();
 
-        // add the first character
+        // add the first set of characters
         regex.append(list[0].getRegex());
 
-        // add the other characters with a | in front
+        // add the other character sets with a | in front
         for(int i = 1; i < list.length; i++) {
             regex.append("|");
             regex.append(list[i].getRegex());
