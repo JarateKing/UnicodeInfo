@@ -12,6 +12,9 @@ public class CharacterSets {
 
         for(CharArrays array : CharArrays.values())
             sets.add(array);
+
+        for (CharCombinations combinations : CharCombinations.values())
+            sets.add(combinations);
     }
 
     public String listSetsUsed(String input)
