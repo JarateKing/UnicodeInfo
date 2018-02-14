@@ -1,7 +1,10 @@
 public enum CharRanges implements CharacterList
 {
     ASCII_CONTROL (0x0, 0x1F),
-    ASCII_BASIC (0x20, 0x7F);
+    ASCII_BASIC (0x20, 0x7F),
+    LATIN_SUPPLEMENT (0xA0, 0xFF),
+    LATIN_EXTENDED_A (0x100, 0x17F),
+    LATIN_EXTENDED_B (0x180, 0x24F);
 
     private final int start;
     private final int end;
