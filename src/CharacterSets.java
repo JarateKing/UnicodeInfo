@@ -37,6 +37,19 @@ public class CharacterSets {
         return base.toString();
     }
 
+    public CharacterList[] getSetsUsed(String input)
+    {
+        ArrayList<CharacterList> toReturn = new ArrayList<CharacterList>();
+
+        for (CharacterList set : sets)
+        {
+            if (isSetUsed(set, input))
+                toReturn.add(set);
+        }
+
+        return (CharacterList[])(toReturn.toArray());
+    }
+
     public boolean isSetUsed(CharacterList set, String input)
     {
         // go through the whole string, checking each character
