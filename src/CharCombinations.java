@@ -1,7 +1,8 @@
-import java.util.ArrayList;
-
 public enum CharCombinations implements CharacterList
 {
+    LATIN (new CharacterList[]{CharRanges.ASCII_BASIC, CharRanges.LATIN_SUPPLEMENT,
+                               CharRanges.LATIN_EXTENDED_A, CharRanges.LATIN_EXTENDED_B});
+
     private final CharacterList[] list;
 
     CharCombinations(CharacterList[] list)
