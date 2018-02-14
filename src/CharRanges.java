@@ -26,6 +26,8 @@ public enum CharRanges implements CharacterList
         return list;
     }
 
+    public int getSize() { return end - start; }
+
     public boolean isCharacterInList(char value)
     {
         return value>=start && value<=end;

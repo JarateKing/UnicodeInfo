@@ -15,6 +15,16 @@ public enum CharCombinations implements CharacterList
         return null;
     }
 
+    public int getSize()
+    {
+        int size = 0;
+
+        for (int i = 0; i < list.length; i++)
+            size += list[i].getSize();
+
+        return size;
+    }
+
     public boolean isCharacterInList(char value)
     {
         for (int i = 0; i < list.length; i++)

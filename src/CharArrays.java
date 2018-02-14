@@ -26,6 +26,8 @@ public enum CharArrays implements CharacterList
         return list;
     }
 
+    public int getSize() { return list.length; }
+
     public boolean isCharacterInList(char value)
     {
         // assume the list is sorted
