@@ -12,7 +12,20 @@ public enum CharCombinations implements CharacterList
 
     public char[] all()
     {
-        return null;
+        char[] toReturn = new char[this.getSize()];
+
+        int offset = 0;
+        for (int i = 0; i < list.length; i++)
+        {
+            char[] current = list[i].all();
+            for (int j = 0; j < current.length; i++)
+            {
+                toReturn[j + offset] = current[j];
+            }
+            offset += list[i].getSize();
+        }
+
+        return toReturn;
     }
 
     public int getSize()
