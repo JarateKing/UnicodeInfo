@@ -10,7 +10,8 @@ public enum CharRanges implements CharacterList
     GREEK_EXTENDED (0x1F00, 0x1FFF),
     CYRILLIC_BASIC (0x400, 0x4FF),
     CYRILLIC_SUPPLEMENT (0x500, 0x52F),
-    DINGBATS (0x2700, 0x27BF);
+    DINGBATS (0x2700, 0x27BF),
+    BRAILLE (0x2800, 0x28FF);
 
     private final int start;
     private final int end;
